@@ -1,0 +1,183 @@
+:root {
+    --bg-color: #f0f0f0;
+    --primary-font: 'Athiti', sans-serif;
+    --democratic-color: #2AA1EC; 
+    --republican-color: #FE6A59;
+    --line-color: darkslategray;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--primary-font);
+}
+
+.Container {
+    display: grid; 
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: start;
+    width: 100vw;
+    height: 100vh;
+}
+
+.Chart {
+    grid-column: 2; 
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr; 
+    grid-template-rows: auto auto auto auto;
+    justify-items: center;
+    align-items: center;
+    padding: 20px; 
+    width: 800px; 
+}
+
+.Chart-title {
+    grid-column: 1 / span3; 
+    grid-row: 1;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.Chart-selectors {
+    grid-column: 1 / span3; 
+    grid-row: 2;
+}
+
+.Chart-subtitleLeft {
+    grid-column: 1; 
+    grid-row: 3; 
+}
+
+.Chart-subtitleRight {
+    grid-column: 3; 
+    grid-row: 3; 
+}
+
+.Chart-left {
+    grid-column: 1;
+    grid-row: 4; 
+    width: 100%; 
+}
+
+.Chart-divider {
+    grid-column: 2; 
+    grid-row: 4; 
+    background-color: var(--line-color); 
+    height: 100%; 
+    width: 100%; 
+}
+.Chart-right {
+    grid-row: 4; 
+    grid-column: 3;
+    width: 100%; 
+}
+
+.Chart-row {
+    display: flex;
+    align-items: center;
+}
+
+.Chart-left > .Chart-row {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+.u-dottedLine {
+    height: 50%; 
+    border-top: 2px dotted var(--line-color); 
+    min-width: 20px;
+    flex-grow: 1;
+    margin-left: 4px; 
+    margin-right: 4px; 
+}
+
+
+.Chart-bar {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border: .5px solid var(--line-color);
+    box-sizing: border-box;
+    height: 40px;
+    padding: 2px;
+    color: white;
+    transition: .2s; 
+}
+
+.Chart-row:first-child {
+    margin-top: 10px;
+}
+
+.Chart-row {
+    margin-bottom: 5px; 
+    min-height: 50px;
+}
+
+.Chart-row:last-child {
+    margin-bottom: 10px;
+}
+
+.DemocraticBar {
+    background-color: var(--democratic-color);
+    border-right: 0; 
+}
+
+.fa-democrat {
+    color: var(--democratic-color);
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    -ms-transition: -ms-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+}
+
+.fa-democrat:hover {
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+}
+
+
+.RepublicanBar {
+    background-color: var(--republican-color);
+    border-left: 0; 
+}
+
+.fa-republican {
+    color: var(--republican-color);
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    -ms-transition: -ms-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+}
+
+.fa-republican:hover {
+    transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+}
+
+.Chart-bar:hover {
+    box-shadow: 0 3px 10px rgba(0,0,0,.2);
+    transform: translate3d(0,-2px,0);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 850px) { 
+    .Chart {
+        width: 700px;
+    }
+    .u-dottedLine {
+        min-width: 5px;
+    }
+}
+
+@media screen and (max-width: 750px) { 
+    .Chart {
+        width: 600px;
+    }
+
+}
+@media screen and (max-width: 650px) { 
+    .Chart {
+        width: 500px;
+    }
+}

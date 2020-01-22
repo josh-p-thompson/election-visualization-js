@@ -1,0 +1,157 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf8" />
+        <!-- import css -->
+        <link rel="stylesheet" href="./css/style.css" />
+
+        <!-- import fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Athiti&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet">
+
+        <!-- import fontawesome -->
+        <script src="https://kit.fontawesome.com/a70a6482bb.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="Container">
+            <div class="Chart">
+                <div class="Chart-title">
+                    <h1>U.S. Presidential Election Results by State</h1>
+                </div>
+                <div class="Chart-selectors">
+                    <select id="Chart-selectors-year" onChange="render()">
+                        <option>-</option>
+                        <option>1976</option>
+                    </select>
+                    <select id="Chart-selectors-format" onChange="render()">
+                        <option>percentage</option>
+                        <option>candidatevotes</option>
+                    </select>
+                </div>
+                <div class="Chart-subtitleLeft">
+                    <h2><i class="fas fa-democrat"></i> Democrats</h2>
+                </div>
+                <div class="Chart-left" id="chart-left">
+                    <div class="Chart-row">
+                        <div class="Chart-barLabel"> 
+                            California
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-bar DemocraticBar CA" id="D-CA" style="width: 62%;" onclick="alert('WINNER')">
+                            62.0%
+                        </div>
+                    </div>
+                    <div class="Chart-row">
+                        <div class="Chart-barLabel"> 
+                            Hawaii
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-bar DemocraticBar HI" id="D-HI" style="width: 62%;" onclick="alert('WINNER')">
+                            62.0%
+                        </div>
+                    </div>
+                    <div class="Chart-row">
+                        <div class="Chart-barLabel"> 
+                            Maryland
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-bar DemocraticBar MD" id="D-MD" style="width: 62%;" onclick="alert('WINNER')">
+                            60.0%
+                        </div>
+                    </div>
+                    <div class="Chart-row">
+                        <div class="Chart-barLabel"> 
+                            Alabama
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-bar DemocraticBar AL" id="D-AL" style="width: 34%;" onclick="alert('LOSER')">
+                            34.0%
+                        </div>
+                    </div>
+                    <div class="Chart-row">
+                        <div class="Chart-barLabel"> 
+                            Kentucky
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-bar DemocraticBar KY" id="D-KY" style="width: 33%;" onclick="alert('LOSER')">
+                            33.0%
+                        </div>
+                    </div>
+                    <div class="Chart-row">
+                        <div class="Chart-barLabel"> 
+                            West Virginia
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-bar DemocraticBar WV" id="D-WV" style="width: 26%;" onclick="alert('LOSER')">
+                            26.0%
+                        </div>
+                    </div>
+                </div>
+                <div class=Chart-divider></div>
+                <div class="Chart-subtitleRight">
+                    <h2><i class="fas fa-republican"></i> Republicans</h2>
+                </div>
+                <div class="Chart-right" id="chart-right">
+                    <div class="Chart-row">
+                        <div class="Chart-bar RepublicanBar CA" id="R-CA" style="width: 32%;" onclick="alert('LOSER')">
+                                32.0%
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-barLabel"> 
+                                California
+                        </div>
+                    </div>
+                    <div class="Chart-row">
+                        <div class="Chart-bar RepublicanBar HI" id="R-HI" style="width: 30%;" onclick="alert('LOSER')">
+                                30.0%
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-barLabel"> 
+                                Hawaii
+                        </div>
+                    </div>
+                    <div class="Chart-row">
+                        <div class="Chart-bar RepublicanBar MD" id="R-MD" style="width: 34%;" onclick="alert('LOSER')">
+                                34.0%
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-barLabel"> 
+                                Maryland
+                        </div>
+                    </div>
+                    <div class="Chart-row">
+                        <div class="Chart-bar RepublicanBar AL" id="R-AL" style="width: 62%;" onclick="alert('WINNER')">
+                                62.0%
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-barLabel"> 
+                                Alabama
+                        </div>
+                    </div>
+                    <div class="Chart-row">
+                        <div class="Chart-bar RepublicanBar KY" id="R-KY" style="width: 63%;" onclick="alert('WINNER')">
+                                63.0%
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-barLabel"> 
+                                Kentucky
+                        </div>
+                    </div>
+                    <div class="Chart-row">
+                        <div class="Chart-bar RepublicanBar WV" id="R-WV" style="width: 68%;" onclick="alert('WINNER')">
+                                68.0%
+                        </div>
+                        <div class="u-dottedLine"></div>
+                        <div class="Chart-barLabel"> 
+                                West Virginia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="js/main.js"></script>
+    </body>
+</html>
